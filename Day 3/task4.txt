@@ -1,0 +1,10 @@
+write module names fileoperation
+contain 3 functions 
+	read(filepath,option)--->all,5,line,lines
+	write(filepath,content )--->isintance --->check datatype
+	append(filepath,newcontent )-->write,lines
+
+read(asd.txt,all)--->file.read()
+3---file.read(3)
+line--->file.readline()
+lines--->file.readlines()
