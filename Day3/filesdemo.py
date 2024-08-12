@@ -70,18 +70,21 @@
 #
 # except:
 #     print(sys.exc_info())
-# # try:
-# #     #open file in write mode
-#     file=open('asd.txt','w')#clear or create file
-#     if(file.writable()):
-#         # print(type(file))
+
+# import sys
+
+# try:
+#     # open file in write mode
+#     file = open('asd.txt', 'w')  # clear or create file
+#     if file.writable():
+#         print(type(file))
 #         file.write('line4')
 #         file.write('''line2
-#         line3''')
+#          line3''') 
 #         l=['aya\n','mai','ali']
 #         file.writelines(l)
-#     #close stream
+#     # close stream 
 #     file.close()
-#
+
 # except:
 #     print(sys.exc_info())

@@ -33,14 +33,14 @@
 # name='python'
 # #local scope from start function to end function
 # #define function
-def fun():
-     name='func'
-    def fun2():
-        global name   #fun2  accsess global var name & modified
-        # nonlocal  name #fun2 accceses local var for edit and read
-        print(name) #acccsess name in fun for read
-        name='changed by fun2'
-    fun2()
-    print(name)#interpreting ?????
-fun()#func
+# def fun():
+#      name='func'
+#     def fun2():
+#         global name   #fun2  accsess global var name & modified
+#         # nonlocal  name #fun2 accceses local var for edit and read
+#         print(name) #acccsess name in fun for read
+#         name='changed by fun2'
+#     fun2()
+#     print(name)#interpreting ?????
+# fun()#func
 # print(name)#python
