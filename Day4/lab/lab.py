@@ -1,81 +1,43 @@
-import psycopg2
-#prepare db connection info
-host='localhost'
-user='iti'
-password='789456'
-dbname='python-fayoum'
-connection=psycopg2.connect( database=dbname,
-            user=user,
-            password=password,
-            host=host
-            )
-# print(type(connection),connection)
-cur=connection.cursor()
-cur.execute("select * from traineedata;")
-# cur.commit()   #must be in case of insert
-# traineeid=cur.fetchone()
-# #insert,update,delete
-# connection.commit()
-recoreds=cur.fetchall()
-# recoreds object of [(1,'aya',1),(),()]
-print(recoreds)
-for recored in recoreds:
-    print('ID:',recored[0],"Name:",recored[1],"Track:",recored[2],sep='\n',end='\n============')
+class Human:
+    # Class variable
+    species = "Homo sapiens"
+    
+    # Initializer / Instance variables
+    def __init__(self, name, age, gender):
+        self.name = name
+        self.age = age
+        self.gender = gender
+    
+    # Instance methods
+    def speak(self, words):
+        return f"{self.name} says: '{words}'"
+    
+    def walk(self, steps):
+        return f"{self.name} walked {steps} steps."
+    
+    def introduce(self):
+        return f"Hi, I'm {self.name}. I'm {self.age} years old and I'm {self.gender}."
 
 
 
-
-##MY PRACTICE 
-# import psycopg2
-# import sys
-
-# # Global variables for connection configuration
-# host = 'localhost'
-# user = 'iti'
-# password = '789456'
-# dbname = 'python-fayoum'
-
-# Connect to the database
-# def connect():
-#     try:
-#         connection = psycopg2.connect(
-#             host=host,
-#             user=user,
-#             password=password,
-#             dbname=dbname
-#         )
-#         return connection
-#     except Exception as e:
-#         print(f"Connection failed: {e}")
-#         sys.exit(1)  # Exit the program if connection fails
-
-# # Create a table with the given query
-# def create_table(query):
-#     conn = connect()
-#     try:
-#         cur = conn.cursor()
-#         cur.execute(query)
-#         conn.commit()
-#         print("Table created successfully.")
-#     except Exception as e:
-#         print(f"Exception occurred while creating table: {e}")
-#     finally:
-#         cur.close()
-#         conn.close()
-
-# # Select data from the specified table
-# def select_from_table(table_name):
-#     conn = connect()
-#     query = f'SELECT * FROM {table_name};'
-#     try:
-#         cur = conn.cursor()
-#         cur.execute(query)
-#         data = cur.fetchall()
-#         return data
-#     except Exception as e:
-#         print(f"Exception occurred while selecting data: {e}")
-#         return []
-#     finally:
-#         cur.close()
-#         conn.close()
-
+class Employee(Human):
+    # Class variable
+    company_name = "TechCorp"
+    
+    # Initializer / Instance variables
+    def __init__(self, name, age, gender, employee_id, position, salary):
+        super().__init__(name, age, gender)
+        self.employee_id = employee_id
+        self.position = position
+        self.salary = salary
+    
+    # Instance methods
+    def work(self):
+        return f"{self.name} is working as a {self.position}."
+    
+    def get_salary(self):
+        return f"{self.name}'s salary is ${self.salary}."
+    
+    def promote(self, new_position):
+        self.position = new_position
+        return f"{self.name} has been promoted to {self.position}."
