@@ -1,0 +1,19 @@
+Ass1--->
+module dbconnection
+connect db iti
+table trainee
+table track
+insert,update,select,delete --->trainee or track
+Ass2--->
+create class human--->defin classvar,instnacevar,methods
+create class employee-->defin classvar,instnacevar,methods
+note
+describe it as carchteristic and actions
+==================================
+Bank Account System: Bunce
+Design classes for Bank, Account, and Customer.
+Establish relationships where a Bank has multiple Customers, 
+and a Customer can have multiple Accounts.
+Develop methods for transf
+erring money between accounts, 
+checking balances, and generating account statements.	
