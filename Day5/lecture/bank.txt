@@ -1,0 +1,8 @@
+==================================
+Bank Account System: Bunce
+Design classes for Bank, Account, and Customer.
+Establish relationships where a Bank has multiple Customers, 
+and a Customer can have multiple Accounts.
+Develop methods for transf
+    erring money between accounts,
+checking balances, and generating account statements.	
